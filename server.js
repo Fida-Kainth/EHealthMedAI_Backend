@@ -190,8 +190,8 @@ async function initializeDatabase() {
   }
 }
 
-// Start server
-app.listen(PORT, async () => {
+// Start server function
+async function startServer() {
   console.log('═'.repeat(50));
   console.log(`🚀 Server is running on port ${PORT}`);
   console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
@@ -213,6 +213,13 @@ app.listen(PORT, async () => {
   console.log('═'.repeat(50));
   console.log('✨ Server ready to accept requests');
   console.log('═'.repeat(50));
+}
+
+// Start server
+app.listen(PORT, () => {
+  startServer().catch(err => {
+    console.error('❌ Server startup failed:', err);
+  });
 });
 
 module.exports = app;
