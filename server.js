@@ -193,9 +193,9 @@ async function initializeDatabase() {
       }
       
       // Run db-updates.sql
-      if (fs.existsSync(path.join(__dirname, 'db-updates.sql'))) {
+      if (fs.existsSync(path.join(__dirname, 'config', 'db-updates.sql'))) {
         console.log('📝 Running db-updates.sql...');
-        const updates = fs.readFileSync(path.join(__dirname, 'db-updates.sql'), 'utf8');
+        const updates = fs.readFileSync(path.join(__dirname, 'config', 'db-updates.sql'), 'utf8');
         const statements = parseSQLStatements(updates);
         
         for (let i = 0; i < statements.length; i++) {
@@ -215,9 +215,9 @@ async function initializeDatabase() {
       console.log('✅ Database tables exist');
       
       // Run updates anyway (they have IF NOT EXISTS checks)
-      if (fs.existsSync(path.join(__dirname, 'db-updates.sql'))) {
+      if (fs.existsSync(path.join(__dirname, 'config', 'db-updates.sql'))) {
         console.log('📝 Running db-updates.sql...');
-        const updates = fs.readFileSync(path.join(__dirname, 'db-updates.sql'), 'utf8');
+        const updates = fs.readFileSync(path.join(__dirname, 'config', 'db-updates.sql'), 'utf8');
         const statements = parseSQLStatements(updates);
         
         for (const statement of statements) {
