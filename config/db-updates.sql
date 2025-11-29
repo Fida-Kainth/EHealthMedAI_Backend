@@ -2728,7 +2728,7 @@ ALTER TABLE ONLY public.webhooks ALTER COLUMN id SET DEFAULT nextval('public.web
 --
 
 ALTER TABLE ONLY public.access_policies
-    ADD CONSTRAINT access_policies_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT access_policies_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2736,7 +2736,7 @@ ALTER TABLE ONLY public.access_policies
 --
 
 ALTER TABLE ONLY public.agent_performance
-    ADD CONSTRAINT agent_performance_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT agent_performance_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2744,7 +2744,7 @@ ALTER TABLE ONLY public.agent_performance
 --
 
 ALTER TABLE ONLY public.ai_agents
-    ADD CONSTRAINT ai_agents_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT ai_agents_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2752,7 +2752,7 @@ ALTER TABLE ONLY public.ai_agents
 --
 
 ALTER TABLE ONLY public.api_keys
-    ADD CONSTRAINT api_keys_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT api_keys_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2760,7 +2760,7 @@ ALTER TABLE ONLY public.api_keys
 --
 
 ALTER TABLE ONLY public.appointments
-    ADD CONSTRAINT appointments_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT appointments_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2768,7 +2768,7 @@ ALTER TABLE ONLY public.appointments
 --
 
 ALTER TABLE ONLY public.approval_records
-    ADD CONSTRAINT approval_records_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT approval_records_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2776,7 +2776,7 @@ ALTER TABLE ONLY public.approval_records
 --
 
 ALTER TABLE ONLY public.approval_workflows
-    ADD CONSTRAINT approval_workflows_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT approval_workflows_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2784,7 +2784,7 @@ ALTER TABLE ONLY public.approval_workflows
 --
 
 ALTER TABLE ONLY public.audit_logs
-    ADD CONSTRAINT audit_logs_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT audit_logs_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2792,7 +2792,7 @@ ALTER TABLE ONLY public.audit_logs
 --
 
 ALTER TABLE ONLY public.baa_agreements
-    ADD CONSTRAINT baa_agreements_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT baa_agreements_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2808,7 +2808,7 @@ ALTER TABLE ONLY public.branding_configs
 --
 
 ALTER TABLE ONLY public.branding_configs
-    ADD CONSTRAINT branding_configs_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT branding_configs_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2816,7 +2816,7 @@ ALTER TABLE ONLY public.branding_configs
 --
 
 ALTER TABLE ONLY public.call_logs
-    ADD CONSTRAINT call_logs_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT call_logs_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2832,7 +2832,7 @@ ALTER TABLE ONLY public.call_metrics
 --
 
 ALTER TABLE ONLY public.call_metrics
-    ADD CONSTRAINT call_metrics_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT call_metrics_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2840,7 +2840,7 @@ ALTER TABLE ONLY public.call_metrics
 --
 
 ALTER TABLE ONLY public.call_recordings
-    ADD CONSTRAINT call_recordings_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT call_recordings_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2856,7 +2856,7 @@ ALTER TABLE ONLY public.change_control_log
 --
 
 ALTER TABLE ONLY public.change_control_log
-    ADD CONSTRAINT change_control_log_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT change_control_log_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2864,7 +2864,7 @@ ALTER TABLE ONLY public.change_control_log
 --
 
 ALTER TABLE ONLY public.consent_records
-    ADD CONSTRAINT consent_records_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT consent_records_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2872,7 +2872,7 @@ ALTER TABLE ONLY public.consent_records
 --
 
 ALTER TABLE ONLY public.constraint_violations
-    ADD CONSTRAINT constraint_violations_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT constraint_violations_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2888,7 +2888,7 @@ ALTER TABLE ONLY public.constraints
 --
 
 ALTER TABLE ONLY public.constraints
-    ADD CONSTRAINT constraints_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT constraints_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2896,7 +2896,7 @@ ALTER TABLE ONLY public.constraints
 --
 
 ALTER TABLE ONLY public.conversations
-    ADD CONSTRAINT conversations_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT conversations_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2904,7 +2904,7 @@ ALTER TABLE ONLY public.conversations
 --
 
 ALTER TABLE ONLY public.deliverable_milestones
-    ADD CONSTRAINT deliverable_milestones_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT deliverable_milestones_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2920,7 +2920,7 @@ ALTER TABLE ONLY public.deliverables
 --
 
 ALTER TABLE ONLY public.deliverables
-    ADD CONSTRAINT deliverables_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT deliverables_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2928,7 +2928,7 @@ ALTER TABLE ONLY public.deliverables
 --
 
 ALTER TABLE ONLY public.ehr_systems
-    ADD CONSTRAINT ehr_systems_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT ehr_systems_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2936,7 +2936,7 @@ ALTER TABLE ONLY public.ehr_systems
 --
 
 ALTER TABLE ONLY public.encryption_keys
-    ADD CONSTRAINT encryption_keys_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT encryption_keys_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2944,7 +2944,7 @@ ALTER TABLE ONLY public.encryption_keys
 --
 
 ALTER TABLE ONLY public.fhir_connectors
-    ADD CONSTRAINT fhir_connectors_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT fhir_connectors_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2952,7 +2952,7 @@ ALTER TABLE ONLY public.fhir_connectors
 --
 
 ALTER TABLE ONLY public.generated_reports
-    ADD CONSTRAINT generated_reports_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT generated_reports_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2960,7 +2960,7 @@ ALTER TABLE ONLY public.generated_reports
 --
 
 ALTER TABLE ONLY public.hl7_connectors
-    ADD CONSTRAINT hl7_connectors_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT hl7_connectors_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2968,7 +2968,7 @@ ALTER TABLE ONLY public.hl7_connectors
 --
 
 ALTER TABLE ONLY public.integrations
-    ADD CONSTRAINT integrations_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT integrations_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2976,7 +2976,7 @@ ALTER TABLE ONLY public.integrations
 --
 
 ALTER TABLE ONLY public.key_rotation_log
-    ADD CONSTRAINT key_rotation_log_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT key_rotation_log_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -2984,7 +2984,7 @@ ALTER TABLE ONLY public.key_rotation_log
 --
 
 ALTER TABLE ONLY public.nlu_configurations
-    ADD CONSTRAINT nlu_configurations_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT nlu_configurations_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3000,7 +3000,7 @@ ALTER TABLE ONLY public.operational_assumptions
 --
 
 ALTER TABLE ONLY public.operational_assumptions
-    ADD CONSTRAINT operational_assumptions_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT operational_assumptions_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3008,7 +3008,7 @@ ALTER TABLE ONLY public.operational_assumptions
 --
 
 ALTER TABLE ONLY public.organizations
-    ADD CONSTRAINT organizations_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT organizations_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3032,7 +3032,7 @@ ALTER TABLE ONLY public.permissions
 --
 
 ALTER TABLE ONLY public.permissions
-    ADD CONSTRAINT permissions_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT permissions_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3040,7 +3040,7 @@ ALTER TABLE ONLY public.permissions
 --
 
 ALTER TABLE ONLY public.phone_numbers
-    ADD CONSTRAINT phone_numbers_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT phone_numbers_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3048,7 +3048,7 @@ ALTER TABLE ONLY public.phone_numbers
 --
 
 ALTER TABLE ONLY public.portals
-    ADD CONSTRAINT portals_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT portals_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3056,7 +3056,7 @@ ALTER TABLE ONLY public.portals
 --
 
 ALTER TABLE ONLY public.reading_guidance
-    ADD CONSTRAINT reading_guidance_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT reading_guidance_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3072,7 +3072,7 @@ ALTER TABLE ONLY public.reference_standards
 --
 
 ALTER TABLE ONLY public.reference_standards
-    ADD CONSTRAINT reference_standards_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT reference_standards_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3080,7 +3080,7 @@ ALTER TABLE ONLY public.reference_standards
 --
 
 ALTER TABLE ONLY public.report_templates
-    ADD CONSTRAINT report_templates_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT report_templates_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3088,7 +3088,7 @@ ALTER TABLE ONLY public.report_templates
 --
 
 ALTER TABLE ONLY public.requirement_dependencies
-    ADD CONSTRAINT requirement_dependencies_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT requirement_dependencies_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3104,7 +3104,7 @@ ALTER TABLE ONLY public.requirement_dependencies
 --
 
 ALTER TABLE ONLY public.requirement_verifications
-    ADD CONSTRAINT requirement_verifications_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT requirement_verifications_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3112,7 +3112,7 @@ ALTER TABLE ONLY public.requirement_verifications
 --
 
 ALTER TABLE ONLY public.requirements
-    ADD CONSTRAINT requirements_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT requirements_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3136,7 +3136,7 @@ ALTER TABLE ONLY public.retention_policies
 --
 
 ALTER TABLE ONLY public.retention_policies
-    ADD CONSTRAINT retention_policies_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT retention_policies_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3144,7 +3144,7 @@ ALTER TABLE ONLY public.retention_policies
 --
 
 ALTER TABLE ONLY public.role_permissions
-    ADD CONSTRAINT role_permissions_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT role_permissions_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3160,7 +3160,7 @@ ALTER TABLE ONLY public.role_permissions
 --
 
 ALTER TABLE ONLY public.sdks
-    ADD CONSTRAINT sdks_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT sdks_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3176,7 +3176,7 @@ ALTER TABLE ONLY public.srs_documents
 --
 
 ALTER TABLE ONLY public.srs_documents
-    ADD CONSTRAINT srs_documents_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT srs_documents_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3184,7 +3184,7 @@ ALTER TABLE ONLY public.srs_documents
 --
 
 ALTER TABLE ONLY public.srs_section_templates
-    ADD CONSTRAINT srs_section_templates_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT srs_section_templates_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3208,7 +3208,7 @@ ALTER TABLE ONLY public.srs_versions
 --
 
 ALTER TABLE ONLY public.srs_versions
-    ADD CONSTRAINT srs_versions_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT srs_versions_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3224,7 +3224,7 @@ ALTER TABLE ONLY public.stakeholder_types
 --
 
 ALTER TABLE ONLY public.stakeholder_types
-    ADD CONSTRAINT stakeholder_types_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT stakeholder_types_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3232,7 +3232,7 @@ ALTER TABLE ONLY public.stakeholder_types
 --
 
 ALTER TABLE ONLY public.stt_configurations
-    ADD CONSTRAINT stt_configurations_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT stt_configurations_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3240,7 +3240,7 @@ ALTER TABLE ONLY public.stt_configurations
 --
 
 ALTER TABLE ONLY public.terminology
-    ADD CONSTRAINT terminology_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT terminology_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3256,7 +3256,7 @@ ALTER TABLE ONLY public.terminology
 --
 
 ALTER TABLE ONLY public.tts_configurations
-    ADD CONSTRAINT tts_configurations_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT tts_configurations_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3272,7 +3272,7 @@ ALTER TABLE ONLY public.users
 --
 
 ALTER TABLE ONLY public.users
-    ADD CONSTRAINT users_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT users_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3280,7 +3280,7 @@ ALTER TABLE ONLY public.users
 --
 
 ALTER TABLE ONLY public.voice_channels
-    ADD CONSTRAINT voice_channels_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT voice_channels_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3288,7 +3288,7 @@ ALTER TABLE ONLY public.voice_channels
 --
 
 ALTER TABLE ONLY public.webhook_events
-    ADD CONSTRAINT webhook_events_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT webhook_events_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
@@ -3296,7 +3296,7 @@ ALTER TABLE ONLY public.webhook_events
 --
 
 ALTER TABLE ONLY public.webhooks
-    ADD CONSTRAINT webhooks_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT webhooks_pkey -- PRIMARY KEY (to be fixed) (id);
 
 
 --
