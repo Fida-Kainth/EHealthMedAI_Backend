@@ -128,6 +128,34 @@ app.use((req, res) => {
 });
 
 /**
+ * Parse SQL into separate statements
+ */
+function parseSQLStatements(sql) {
+  const statements = [];
+  let current = '';
+  const lines = sql.split('\n');
+  
+  for (const line of lines) {
+    const trimmed = line.trim();
+    // Skip comments and empty lines
+    if (!trimmed || trimmed.startsWith('--')) continue;
+    
+    current += line + '\n';
+    
+    // End of statement
+    if (trimmed.endsWith(';')) {
+      const statement = current.trim();
+      if (statement && statement !== ';') {
+        statements.push(statement);
+      }
+      current = '';
+    }
+  }
+  
+  return statements;
+}
+
+/**
  * Initialize database - run migrations if needed
  */
 async function initializeDatabase() {
@@ -147,19 +175,39 @@ async function initializeDatabase() {
       console.log('⚠️  Database tables not found. Running migrations...');
       
       // Run db.sql
-      if (fs.existsSync(path.join(__dirname, 'db.sql'))) {
+      if (fs.existsSync(path.join(__dirname, 'config', 'db.sql'))) {
         console.log('📝 Running db.sql...');
-        const schema = fs.readFileSync(path.join(__dirname, 'db.sql'), 'utf8');
-        await db.query(schema);
-        console.log('✅ db.sql completed');
+        const schema = fs.readFileSync(path.join(__dirname, 'config', 'db.sql'), 'utf8');
+        const statements = parseSQLStatements(schema);
+        
+        for (let i = 0; i < statements.length; i++) {
+          try {
+            await db.query(statements[i]);
+          } catch (err) {
+            if (!err.message.includes('already exists')) {
+              console.error(`  ✗ Statement ${i + 1} failed:`, err.message);
+            }
+          }
+        }
+        console.log(`✅ db.sql completed (${statements.length} statements)`);
       }
       
       // Run db-updates.sql
       if (fs.existsSync(path.join(__dirname, 'db-updates.sql'))) {
         console.log('📝 Running db-updates.sql...');
         const updates = fs.readFileSync(path.join(__dirname, 'db-updates.sql'), 'utf8');
-        await db.query(updates);
-        console.log('✅ db-updates.sql completed');
+        const statements = parseSQLStatements(updates);
+        
+        for (let i = 0; i < statements.length; i++) {
+          try {
+            await db.query(statements[i]);
+          } catch (err) {
+            if (!err.message.includes('already exists')) {
+              console.error(`  ✗ Statement ${i + 1} failed:`, err.message);
+            }
+          }
+        }
+        console.log(`✅ db-updates.sql completed (${statements.length} statements)`);
       }
       
       console.log('✅ Database initialization completed!');
@@ -170,7 +218,18 @@ async function initializeDatabase() {
       if (fs.existsSync(path.join(__dirname, 'db-updates.sql'))) {
         console.log('📝 Running db-updates.sql...');
         const updates = fs.readFileSync(path.join(__dirname, 'db-updates.sql'), 'utf8');
-        await db.query(updates);
+        const statements = parseSQLStatements(updates);
+        
+        for (const statement of statements) {
+          try {
+            await db.query(statement);
+          } catch (err) {
+            // Silently ignore "already exists" errors
+            if (!err.message.includes('already exists')) {
+              console.error('  ✗ Error:', err.message);
+            }
+          }
+        }
       }
     }
     
