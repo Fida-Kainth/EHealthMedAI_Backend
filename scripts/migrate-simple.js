@@ -35,8 +35,8 @@ async function runMigrations() {
     
     // Read SQL files
     const sqlFiles = [
-      { name: 'db.sql', path: path.join(__dirname, '../db.sql') },
-      { name: 'db-updates.sql', path: path.join(__dirname, '../db-updates.sql') }
+      { name: 'db.sql', path: path.join(__dirname, '../config/db.sql') },
+      { name: 'db-updates.sql', path: path.join(__dirname, '../config/db-updates.sql') }
     ];
     
     for (const sqlFile of sqlFiles) {
